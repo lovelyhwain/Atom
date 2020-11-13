@@ -35,16 +35,14 @@ app.use(express.static('data')) //data라는 파일을 들고와서 쓸수있음
 //경로안에 있는것이 동작하겠다는 의미
  //라우터 생성하기
 app.get('/', function(req, res){ //'/':슬러시 한개는 기본 위치를 뜻함  ex) localhost:3003
-  res.send('<h3>여기는 메 dtdt<br> 홈페이지입니다.<h3>')  //응답에 대한 대답
+  res.send('<h3>여기는 Main<br> 홈페이지입니다.<h3>')  //응답에 대한 대답
 });
 // app.get('/login', function(req, res){
 //   res.send('여기는 로그인 페이지입니다.')
 // });
-
 app.get('/topic', function(req, res){
   res.send('여기는 Topic 페이지입니다.')
 });
-
 app.get('/pug', function(req, res){
   res.render('news') //뉴스의 파일이 실행될거다.
 });
@@ -52,7 +50,7 @@ app.get('/pug', function(req, res){
 app.get('/dynamic',function(req, res){
   // var sp = ''; //빈 문자열
   // for(var i=0; i<10; i++){
-  //   sp=sp+ `<h1>${i}안알랴줌!!!<h1><br>`  //특이한 그레이브 부호
+  //   sp=sp+ `<h1>안알랴줌!!!<h1><br>`  //특이한 그레이브 부호
   // }
   // res.send(sp);
   res.send(`
